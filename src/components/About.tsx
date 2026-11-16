@@ -11,14 +11,14 @@ const About: React.FC = () => {
 
   const values = [
     {
-      icon: '💡',
+      icon: '📐',
       title: 'Clean Detail Drawing',
-      description: 'Writing maintainable, efficient, and well-documented code is at the heart of everything I build.'
+      description: 'Clear dimensions, tolerances, and annotations in every blueprint, so machinists can work fast without guessing.'
     },
     {
       icon: '🎯',
-      title: 'User Experience',
-      description: 'Every dimension and detail of the design is carefully crafted to create intuitive and engaging user experiences.'
+      title: 'Physics-Accurate Design',
+      description: 'Every design follows real-world physical laws 100% — loads, fits, and motions that actually work when manufactured.'
     },
     {
       icon: '📏',
@@ -28,10 +28,10 @@ const About: React.FC = () => {
   ]
 
   const stats = [
-    { number: '1', label: 'Years Experience' },
-    { number: '50+', label: 'Projects Done' },
-    { number: '30+', label: 'Participate in the Competition' },
-    { number: '10/7', label: 'Support' }
+    { number: '3', label: 'Competitions Joined' },
+    { number: '50+', label: 'Projects & Sketches' },
+    { number: '4', label: 'CAD Software' },
+    { number: '100%', label: 'Physics-Accurate Designs' }
   ]
 
   return (
@@ -45,14 +45,11 @@ const About: React.FC = () => {
         <div className="about-content">
           <div className="about-image">
             <div className="image-frame">
-              <div className="profile-placeholder">
-                <div className="profile-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" />
-                    <path d="M6 21a6 6 0 0112 0" />
-                    <path d="M6 21s1.5-6 6-6 6 6 6 6" />
-                  </svg>
-                </div>
+              <img 
+                src="/profil.jpg" 
+                alt="Profile Photo" 
+                className="profile-image" 
+                />
                 <div className="floating-shapes">
                   <div className="shape shape-1"></div>
                   <div className="shape shape-2"></div>
@@ -64,7 +61,10 @@ const About: React.FC = () => {
 
           <div className="about-info">
             <p className="about-intro">
-              I am a 3D designer for manufacturing and create blueprints containing dimensions and tolerances with high accuracy and precision to simplify the work. I also create 3D model representations of the original object. The design can be used for machining and can be 3D printed using programs such as Mastercam, Fusion 360 or Solidcam. The programs I use are Autodesk Inventor and Autodesk Autocad, I continue to learn new programs to expand my skills. 
+              I am a 3D designer for manufacturing and create blueprints containing dimensions and tolerances with high accuracy and precision to simplify the work. I also create 3D model representations of the original object. The design can be used for machining and can be 3D printed using programs such as Mastercam, Fusion 360 or Solidcam. The programs I use are Autodesk Inventor and Autodesk Autocad, I continue to learn new programs to expand my skills.
+            </p>
+            <p className="about-intro">
+              Currently I am a Machining Engineering student at SMKN 1 Pungging, Mojokerto, doing my internship in the industry — operating real CNC machines from workpiece setup to full production runs, and practicing CAM programming with Mastercam.
             </p>
 
             <div className="values-grid">
@@ -100,9 +100,8 @@ const About: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
     </section>
-  )
+    )
 }
 
 export default About

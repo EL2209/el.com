@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const Skills: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const [activeCategory, setActiveCategory] = useState('frontend')
+  const [activeCategory, setActiveCategory] = useState('rendering')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,45 +23,35 @@ const Skills: React.FC = () => {
   }, [])
 
   const categories = [
-    { id: 'frontend', name: 'Frontend' },
-    { id: 'backend', name: 'Backend' },
-    { id: 'tools', name: 'Tools' },
+    { id: 'rendering', name: 'Rendering & Visuals' },
+    { id: 'engineering', name: 'Engineering' },
+    { id: 'software', name: 'Software' },
     { id: 'design', name: 'Design' }
   ]
 
   const skillsData = {
-    frontend: [
-      { name: 'React', level: 95, icon: '⚛️' },
-      { name: 'TypeScript', level: 90, icon: '📘' },
-      { name: 'Tailwind CSS', level: 92, icon: '🎨' },
-      { name: 'Next.js', level: 88, icon: '▲' },
-      { name: 'Vue.js', level: 80, icon: '💚' },
-      { name: 'HTML5/CSS3', level: 95, icon: '🌐' }
+    rendering: [
+      { name: 'Photorealistic Rendering', level: 95, icon: '🖼️' },
+      { name: 'Motion Study & Animation', level: 90, icon: '🎥' },
+      { name: 'Exploded View', level: 92, icon: '🔍' },
     ],
-    backend: [
-      { name: 'Node.js', level: 88, icon: '🟢' },
-      { name: 'Express', level: 85, icon: '🚂' },
-      { name: 'Python', level: 82, icon: '🐍' },
-      { name: 'PostgreSQL', level: 80, icon: '🐘' },
-      { name: 'MongoDB', level: 78, icon: '🍃' },
-      { name: 'GraphQL', level: 75, icon: '◈' }
+    engineering: [
+      { name: 'Engineering Drawings', level: 88, icon: '📐' },
+      { name: 'Structural Analysis', level: 85, icon: '🏗️' },
+      { name: 'Manufacturing Workflow', level: 82, icon: '🏭' },
+      { name: 'CNC Machine Operation', level: 75, icon: '⚙️' },
     ],
-    tools: [
-      { name: 'Git/GitHub', level: 92, icon: '📦' },
-      { name: 'Docker', level: 78, icon: '🐳' },
-      { name: 'AWS', level: 75, icon: '☁️' },
-      { name: 'Figma', level: 85, icon: '🎭' },
-      { name: 'VS Code', level: 95, icon: '💻' },
-      { name: 'Webpack', level: 80, icon: '🕸️' }
+    software: [
+      { name: 'Autodesk Inventor', level: 92, icon: '🛠️' },
+      { name: 'Autodesk AutoCAD', level: 40, icon: '📏' },
+      { name: 'Mastercam', level: 20, icon: '⚙️' },
+      { name: 'Autodesk Fusion 360', level: 35, icon: '🔧' },
     ],
     design: [
-      { name: 'UI/UX Design', level: 85, icon: '🎨' },
-      { name: 'Figma', level: 88, icon: '🎭' },
-      { name: 'Adobe XD', level: 75, icon: '📐' },
-      { name: 'Prototyping', level: 82, icon: '📋' },
-      { name: 'Design Systems', level: 80, icon: '🧩' },
-      { name: 'Accessibility', level: 85, icon: '♿' }
-    ]
+      { name: 'GD&T Expert', level: 85, icon: '📏' },
+      { name: 'Design for Manufacturing (DFM)', level: 88, icon: '🏭' },
+      { name: 'Technical Documentation', level: 75, icon: '📝' },
+      ]
   }
 
   return (
@@ -105,14 +95,14 @@ const Skills: React.FC = () => {
         </div>
 
         <div className="skills-showcase">
-          <div className="tech-badge">React</div>
-          <div className="tech-badge">TypeScript</div>
-          <div className="tech-badge">Node.js</div>
-          <div className="tech-badge">Python</div>
-          <div className="tech-badge">PostgreSQL</div>
-          <div className="tech-badge">Docker</div>
-          <div className="tech-badge">AWS</div>
-          <div className="tech-badge">Git</div>
+          <div className="tech-badge">Inventor</div>
+          <div className="tech-badge">AutoCAD</div>
+          <div className="tech-badge">Mastercam</div>
+          <div className="tech-badge">Fusion 360</div>
+          <div className="tech-badge">SolidWorks</div>
+          <div className="tech-badge">CNC Machining</div>
+          <div className="tech-badge">3D Printing</div>
+          <div className="tech-badge">OneShape</div>
         </div>
       </div>
     </section>

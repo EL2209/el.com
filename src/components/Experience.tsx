@@ -34,50 +34,50 @@ const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 1,
-      company: 'Tech Innovations Inc.',
-      role: 'Senior Full Stack Developer',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise web applications and mentoring junior developers.',
+      company: 'Machining Workshop — Industry Internship (PKL)',
+      role: 'CNC Machinist Trainee',
+      period: '2026 — Present',
+      description: 'Internship at a machining company while studying at SMKN 1 Pungging, Mojokerto.',
       achievements: [
-        'Led a team of 5 developers to deliver 10+ major projects',
-        'Reduced page load time by 60% through optimization',
-        'Implemented CI/CD pipelines improving deployment efficiency by 40%'
+        'Operate CNC machines fully — from workpiece setup to running production (excluding CAM programming)',
+        'Learned Mastercam CAM programming fundamentals',
+        'Practiced 2D drafting with AutoCAD',
+        'Tried SolidWorks for part modeling on the shop floor'
       ]
     },
     {
       id: 2,
-      company: 'Digital Solutions Co.',
-      role: 'Full Stack Developer',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client websites and web applications.',
+      company: 'LKS Provinsi Jawa Timur',
+      role: 'Mechanical CAD — Rank 6 of ~30 participants',
+      period: '2025',
+      description: 'Represented the region in the East Java Provincial Vocational Skills Competition (LKS).',
       achievements: [
-        'Built 20+ responsive websites for various clients',
-        'Integrated payment gateways for e-commerce platforms',
-        'Collaborated with design team to implement pixel-perfect UIs'
+        'Ranked 6th out of around 30 participants',
+        'Built a complete competition model under exam time pressure',
+        'Prepared with practice projects from previous LKS seasons'
       ]
     },
     {
       id: 3,
-      company: 'StartUp Hub',
-      role: 'Frontend Developer',
-      period: '2019 - 2020',
-      description: 'Focused on building user interfaces and improving user experience.',
+      company: 'Universitas Negeri Surabaya (Unesa)',
+      role: 'CAD Competition — 3rd Place',
+      period: '2024',
+      description: 'University-level CAD competition open to vocational students.',
       achievements: [
-        'Developed reusable component library used across 5 products',
-        'Improved accessibility scores to 95+ on all projects',
-        'Created interactive data visualizations for analytics dashboard'
+        'Won 3rd place against university-level participants',
+        'Delivered a full part design with detail drawing within the time limit'
       ]
     },
     {
       id: 4,
-      company: 'Freelance',
-      role: 'Web Developer',
-      period: '2018 - 2019',
-      description: 'Worked with diverse clients to deliver custom web solutions.',
+      company: 'Independent Projects',
+      role: 'Design Engineer & 3D Printing',
+      period: 'Ongoing',
+      description: 'Personal projects beyond school assignments — designing, simulating, and printing real parts.',
       achievements: [
-        'Delivered 15+ projects for clients worldwide',
-        'Maintained 100% client satisfaction rate',
-        'Specialized in WordPress and custom web applications'
+        'Design engineering projects that follow real-world physical laws 100%',
+        '3D printing builds from model to finished physical part',
+        'Daily sketch & drawing practice inspired by Instagram challenges'
       ]
     }
   ]
@@ -139,23 +139,23 @@ const Experience: React.FC = () => {
           <div className="highlight-card">
             <div className="highlight-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3>Physics-Based Design</h3>
+            <p>Designs that follow real-world physical laws 100% — what I model actually works when built.</p>
+          </div>
+          <div className="highlight-card">
+            <div className="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                 <path d="M2 17l10 5 10-5"/>
                 <path d="M2 12l10 5 10-5"/>
               </svg>
             </div>
-            <h3>Technical Leadership</h3>
-            <p>Leading teams and making architectural decisions for scalable solutions.</p>
-          </div>
-          <div className="highlight-card">
-            <div className="highlight-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-            <h3>Agile Methodology</h3>
-            <p>Experienced in Scrum and Kanban for efficient project delivery.</p>
+            <h3>Manufacturing-Ready</h3>
+            <p>Detail drawings with proper dimensions and tolerances, straight from CAD to the CNC shop floor.</p>
           </div>
           <div className="highlight-card">
             <div className="highlight-icon">
@@ -166,8 +166,8 @@ const Experience: React.FC = () => {
                 <path d="M16 3.13a4 4 0 010 7.75"/>
               </svg>
             </div>
-            <h3>Mentorship</h3>
-            <p>Passionate about helping junior developers grow their skills.</p>
+            <h3>From Model to Machine</h3>
+            <p>Hands-on with 3D printing and real CNC machining — I know how my designs meet the physical world.</p>
           </div>
         </div>
       </div>

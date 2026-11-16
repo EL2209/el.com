@@ -35,64 +35,65 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-featured online shopping platform with real-time inventory, secure payments, and admin dashboard.',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      links: { demo: '#', github: '#' }
+      title: 'Frame Generators',
+      description: 'Features found in Autodesk Inventor, used for the framework/structure of an object',
+      category: 'drawing',
+      image: '',
+      tags: ['Inventor', 'Autodesk', 'Frame'],
+      links: { demo: 'https://pdf.ac/HPXPTvq6', github: '#' }
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative project management tool with real-time updates, drag-and-drop interface, and team features.',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop',
-      tags: ['Vue.js', 'Firebase', 'Tailwind'],
+      title: '3D Modeling And Assemblies',
+      description: 'Create 3D parts and combine them into 1 functional whole object.',
+      category: 'modeling',
+      image: '',
+      tags: ['Inventor', 'OneShape', 'Assemblies'],
       links: { demo: '#', github: '#' }
     },
     {
       id: 3,
-      title: 'Fitness Tracking App',
-      description: 'Mobile application for tracking workouts, nutrition, and progress with AI-powered insights.',
-      category: 'mobile',
-      image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop',
-      tags: ['React Native', 'Node.js', 'MongoDB'],
+      title: 'Physics-Accurate Design Project',
+      description: 'Personal design engineering project — modeled to follow real-world physical laws 100%, from loads to motion.',
+      category: 'modeling',
+      image: '',
+      tags: ['Inventor', 'Design Engineer', 'Physics'],
       links: { demo: '#', github: '#' }
     },
     {
       id: 4,
-      title: 'Portfolio Website',
-      description: 'Modern, responsive portfolio website with smooth animations and dark mode support.',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop',
-      tags: ['React', 'TypeScript', 'Tailwind'],
+      title: 'LKS Practice Project',
+      description: 'Practice model built from a past LKS competition brief, as preparation for LKS Provinsi Jawa Timur.',
+      category: 'drawing',
+      image: '',
+      tags: ['Inventor', 'LKS', 'Competition'],
       links: { demo: '#', github: '#' }
     },
     {
       id: 5,
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for tracking social media performance across multiple platforms.',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-      tags: ['Next.js', 'GraphQL', 'PostgreSQL'],
+      title: '3D Printed Build',
+      description: 'From 3D model to a real physical part — designed, sliced, and printed end to end.',
+      category: 'printing',
+      image: '',
+      tags: ['3D Print', 'Modeling', 'Rapid Prototyping'],
       links: { demo: '#', github: '#' }
     },
     {
       id: 6,
-      title: 'Weather Application',
-      description: 'Real-time weather app with beautiful visualizations and location-based forecasts.',
-      category: 'mobile',
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&h=400&fit=crop',
-      tags: ['Flutter', 'OpenWeather API'],
+      title: 'Sketch & Drawing Studies',
+      description: 'Daily drawing practice inspired by Instagram challenges — keeping the sketching instinct sharp.',
+      category: 'drawing',
+      image: '',
+      tags: ['Sketch', 'Technical Drawing', 'Practice'],
       links: { demo: '#', github: '#' }
     }
   ]
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'web', label: 'Web Development' },
-    { id: 'mobile', label: 'Mobile Apps' }
+    { id: 'drawing', label: 'Detail Drawing' },
+    { id: 'modeling', label: '3D Modeling' },
+    { id: 'printing', label: '3D Printing' }
   ]
 
   const filteredProjects = activeFilter === 'all' 

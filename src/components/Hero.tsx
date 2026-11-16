@@ -6,35 +6,38 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
   const [typedText, setTypedText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [textIndex, setTextIndex] = useState(0)
+  const [charIndex, setCharIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const texts = ['Full Stack Developer', 'UI/UX Designer', 'Creative Technologist', 'Problem Solver']
+  const texts = ['Design Engineer', '3D Modeler', 'CAD Drafter', 'CNC Machinist']
 
   useEffect(() => {
-    const typeEffect = () => {
-      const fullText = texts[currentIndex]
-      
+    const fullText = texts[textIndex]
+
+    const timeout = setTimeout(() => {
       if (!isDeleting) {
-        setTypedText(fullText.substring(0, currentIndex + 1))
-        if (currentIndex === fullText.length - 1) {
+        const next = fullText.substring(0, charIndex + 1)
+        setTypedText(next)
+        if (charIndex === fullText.length - 1) {
           setTimeout(() => setIsDeleting(true), 2000)
         } else {
-          setCurrentIndex(prev => prev + 1)
+          setCharIndex(prev => prev + 1)
         }
       } else {
-        setTypedText(fullText.substring(0, currentIndex - 1))
-        if (currentIndex === 0) {
+        const next = fullText.substring(0, charIndex - 1)
+        setTypedText(next)
+        if (charIndex === 1) {
           setIsDeleting(false)
-          setCurrentIndex((prev) => (prev + 1) % texts.length)
+          setCharIndex(0)
+          setTextIndex(prev => (prev + 1) % texts.length)
         } else {
-          setCurrentIndex(prev => prev - 1)
+          setCharIndex(prev => prev - 1)
         }
       }
-    }
+    }, isDeleting ? 50 : 100)
 
-    const timeout = setTimeout(typeEffect, isDeleting ? 50 : 100)
     return () => clearTimeout(timeout)
-  }, [currentIndex, isDeleting, texts])
+  }, [charIndex, isDeleting, textIndex, texts])
 
   return (
     <section id="home" className="hero">
@@ -66,11 +69,13 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
           <span className="title-line">Hello, I'm</span>
           <span className="title-name">Dhaniyal El</span>
           <span className="title-role">
+            <span className="typed-text">{typedText}</span>
+            <span className="cursor">|</span>
           </span>
         </h1>
         
         <p className="hero-description">
-          create designs for manufacturing and display them in 3D with high detail and precision.
+          I create designs for manufacturing and display them in 3D with high detail and precision.
         </p>
         
         <div className="hero-buttons">
@@ -93,18 +98,18 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
         
         <div className="hero-stats">
           <div className="stat-item">
-            <span className="stat-number">5+</span>
-            <span className="stat-label">Years Experience</span>
+            <span className="stat-number">3</span>
+            <span className="stat-label">Competitions Joined</span>
           </div>
           <div className="stat-divider"></div>
           <div className="stat-item">
             <span className="stat-number">50+</span>
-            <span className="stat-label">Projects Completed</span>
+            <span className="stat-label">Projects & Sketches</span>
           </div>
           <div className="stat-divider"></div>
           <div className="stat-item">
-            <span className="stat-number">30+</span>
-            <span className="stat-label">Happy Clients</span>
+            <span className="stat-number">4</span>
+            <span className="stat-label">CAD Software</span>
           </div>
         </div>
       </div>

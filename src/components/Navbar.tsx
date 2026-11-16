@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled, isMenuOpen, setIsMenuOpen, sc
     <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'open' : ''}`}>
       <div className="navbar-container">
         <a href="#" className="navbar-logo" onClick={() => scrollToSection('home')}>
-          <span className="logo-text">Back to top</span>
+          <span className="logo-text">Dhaniyal</span>
           <span className="logo-dot">.</span>
         </a>
 
