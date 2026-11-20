@@ -83,7 +83,7 @@ const Projects: React.FC = () => {
       title: 'Sketch & Drawing Studies',
       description: 'Daily drawing practice inspired by Instagram challenges — keeping the sketching instinct sharp.',
       category: 'drawing',
-      image: '',
+      image: '/bracket.jpg',
       tags: ['Sketch', 'Technical Drawing', 'Practice'],
       links: { demo: '#', github: '#' }
     }
@@ -129,6 +129,14 @@ const Projects: React.FC = () => {
 
             >
               <div className="project-image">
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image-img"
+                    loading="lazy"
+                  />
+                )}
                 <div className="image-overlay">
                   <div className="project-links">
                     {project.links.demo && (
