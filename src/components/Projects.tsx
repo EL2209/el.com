@@ -85,7 +85,7 @@ const Projects: React.FC = () => {
       category: 'drawing',
       image: '/bracket.jpg',
       tags: ['Sketch', 'Technical Drawing', 'Practice'],
-      links: { demo: '#', github: '#' }
+      links: { demo: '/BRACKET%201.pdf', github: '#' }
     }
   ]
 
@@ -140,7 +140,7 @@ const Projects: React.FC = () => {
                 <div className="image-overlay">
                   <div className="project-links">
                     {project.links.demo && (
-                      <a href={project.links.demo} className="project-link" aria-label="View Demo">
+                      <a href={project.links.demo} className="project-link" aria-label="View Demo" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
                           <polyline points="15,3 21,3 21,9"/>
